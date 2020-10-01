@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fr_users">
+
+    <com.imra.mytestwork.ui.views.FrameSwipeRefreshLayout
+        android:id="@+id/activity_home_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/activity_home_list_view_repositories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                tools:ignore="NestedScrolling"
+                tools:listitem="@layout/item_layout" />
+
+            <ImageView
+                android:id="@+id/activity_home_image_view_no_repositories"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_no_users"
+                android:visibility="gone"
+                android:layout_marginBottom="50dp"/>
+
+            <TextView
+                android:id="@+id/activity_home_text_view_no_repositories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/no_users"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/activity_home_progress_bar_repositories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </com.imra.mytestwork.ui.views.FrameSwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_home_frame_layout_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:elevation="2dp"
+        android:minWidth="350dp"
+        android:minHeight="350dp"
+        android:background="?colorPrimary"
+        android:visibility="gone"
+        tools:targetApi="lollipop">
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyRentateamTestWork</string>
+    <string name="no_users">No users</string>
+    <string name="todo">TODO</string>
+    <string name="about_app">About app</string>
+    <string name="users">Users</string>
+    <string name="rentateam">Тестовое задание для Rentateam</string>
+</resources>
